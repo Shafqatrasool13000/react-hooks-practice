@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css';
+import UseReducerHook from './componets/UseReducer/UseReducer';
+import useMyFriendStatus from './componets/UseDebugValue/CustomHook';
+import Parent from './componets/UseCallback/Parent';
+import UseRefHook from './componets/UseRef/UseRef';
+import { ResultInput } from './componets/ImperativeHook/ImperativeHook';
+import UseLayoutEffect from './componets/UseLayoutEffect/UseLayoutEffect';
+// import ErrorBounderies from './componets/ErrorBounderies/ErrorBounderies';
+// import LazyLoading from './componets/LazyLoading/LazyLoading';
 
 function App() {
+  useMyFriendStatus('online');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <LazyLoading/> */}
+      {/* <ErrorBounderies/> */}
+      <UseReducerHook/>
+      <Parent/>
+      <UseRefHook/>
+      <ResultInput/>
+      <UseLayoutEffect/>
+      
     </div>
   );
 }
